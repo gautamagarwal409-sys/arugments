@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P> finding the largest number with help of argument object </P>
+    <P id="result"></P>
+    <script>
+        function findLargest() {
+            let largest = arguments[0];
+            for (let i = 1; i < arguments.length; i++) {
+                if (arguments[i] > largest) {
+                    largest = arguments[i];
+                }
+            }
+            document.getElementById("result").innerText = "The largest number is: " + largest;
+        }
+        findLargest(10, 25, 5, 30, 15);
+    </script>
+</body>
+</html>
